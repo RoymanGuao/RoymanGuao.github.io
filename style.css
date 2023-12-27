@@ -266,7 +266,7 @@ h3 {
 
 /* blog */
 .post-list {
-    margin-bottom: -100px;
+    
     box-sizing: border-box;
     display: flex;
     min-height: 100vh;
@@ -343,7 +343,7 @@ h3 {
     transition: .2s;
     overflow: hidden;
     height: auto;
-    
+
 }
 
 
@@ -410,7 +410,7 @@ h3 {
     border-radius: 10px;
     text-align: center;
     padding: 100px 0;
-    margin-bottom: -50px;
+    margin-bottom: 20px;
     margin-top: 200px;
 }
 
