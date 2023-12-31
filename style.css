@@ -2,13 +2,15 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    user-select: none;
 }
+
+
+/* header */
 
 #subtitulo {
     font-size: 19px;
 }
-
-
 
 .header {
     min-height: 100vh;
@@ -18,6 +20,8 @@
     background-size: cover;
     position: relative;
 }
+
+
 
 nav {
     display: flex;
@@ -109,12 +113,12 @@ nav .fa-solid {
     .text-box h1 {
         font-size: 20px;
     }
-    #logote {
+    #header-logo {
         width: 30%;
 
     }
 
-    .logito {
+    .header-logos {
         width: 100%;
     }
     .nav-links ul li {
@@ -150,6 +154,11 @@ nav .fa-solid {
 
 }
 
+
+
+
+
+
 /*-----servicios1------*/
 
 .servicios1 {
@@ -183,6 +192,9 @@ p {
     line-height: 22px;
     padding: 10px;
 }
+
+
+
 
 /*------servicios2-----*/
 
@@ -268,6 +280,9 @@ h3 {
     }
 
 }
+
+
+
 
 /* blog */
 .post-list {
@@ -448,6 +463,9 @@ h3 {
     }
 }
 
+
+
+
 /* Testimonios */
 
 .testimonios {
@@ -490,6 +508,10 @@ h3 {
     }
 }
 
+
+
+
+
 /* footer */
 
 .footer {
@@ -510,6 +532,10 @@ h3 {
     cursor: pointer;
     padding: 18px 0;
 }
+
+
+
+
 
 /* sobre mi */
 
@@ -675,6 +701,9 @@ h3 {
         font-size: 10px;
     }
 }
+
+
+
 
 /* boton wpp */
 .btn-wsp {
