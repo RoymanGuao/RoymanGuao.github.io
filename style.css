@@ -77,6 +77,10 @@ nav img {
     text-align: center;
 }
 
+#boton {
+    margin-left: 60px;
+}
+
 .text-box h1 {
     font-size: 62px;
 }
