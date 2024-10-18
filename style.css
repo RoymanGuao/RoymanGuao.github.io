@@ -85,14 +85,14 @@ nav img {
         font-size: 14px;
     }
 
-    .boton,.boton1 {
+    #boton,#boton1 {
         padding: 8px 20px;
         font-size: 8px;
         margin-left: 20px;
     }
 }
 
-.boton {
+#boton {
     margin-left: 60px;
     margin-top: 100px;
 }
@@ -819,6 +819,8 @@ iframe {
 
 #botonsalarial {
     background-color: #3e3cca;
+    margin-left: 60px;
+    margin-top: 100px;
 }
 
 #botonguia {
@@ -830,3 +832,16 @@ iframe {
         height: 300px;
     }
 }
+
+@media(max-width: 700px) {
+    #botonguia,#botonsalarial {
+        padding: 8px 5px;
+        font-size: 8px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    #botonguia {
+        width: auto;
+    }
+}
+
