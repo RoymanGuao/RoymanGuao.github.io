@@ -503,16 +503,63 @@ h3 {
 
 }
 
-.construction-message {
+.clientes {
     text-align: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1px 20px 100px 20px;
 }
 
-.construction-message h1{
-    color: rgb(60, 56, 56);
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.logos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .logos-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .logos-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .logo {
+        max-width: 120px;
+    }
 }
 
 @media(max-width: 700px) {
