@@ -11,36 +11,77 @@
     <script src="https://kit.fontawesome.com/b78f676cb5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class = "estudios__header">
+    <section class = "header">
         <nav>
             <a id="header-logo"><img src="https://see.fontimg.com/api/renderfont4/L3EyW/eyJyIjoiZnMiLCJoIjoxNjIsInciOjE1MDAsImZzIjoxMDgsImZnYyI6IiNGRkZGRkYiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/Ukc/the-scientist.png" alt="Cursive fonts" class="header-logos"></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa-solid fa-xmark onclick" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">INICIO</a></li>
-                    <li><a href="#servicios1">SERVICIOS</a></li>
-                    <li><a href="#blog">BLOG</a></li>
-                    <li><a href="#about">SOBRE MI</a></li>
-                    <li><a href="#contacto">CONTACTO</a></li>
-                    <li><a href="#testimonios">TESTIMONIOS</a></li>
+                    <li><a href="index.html#servicios1">SERVICIOS</a></li>
+                    <li><a href="index.html#blog">BLOG</a></li>
+                    <li><a href="index.html#about">SOBRE MI</a></li>
+                    <li><a href="index.html#contacto">CONTACTO</a></li>
+                    <li><a href="index.html#testimonios">TESTIMONIOS</a></li>
                     <li><a href="estudios_salariales.html">ESTUDIOS SALARIALES</a></li>
                 </ul>
             </div>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
 
-        <h1>ESTUDIOS SALARIALES</h1>
+        <div class="text-box iframe-container">
+            
+            <iframe src="https://www.youtube.com/embed/eFgSL_CHYwg" title="Los 100 MEJORES GOLES de Cristiano Ronaldo con el Real Madrid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <a id="boton1" href="#contacto" class="hero-btn">BOTON 1</a>
+            <a id="boton" href="#servicios1" class="hero-btn">BOTON 2</a>
+        </div>
+    
     </section>
 
-    <section>
-        <div class="text-box">
-        
-        <a href="#contacto" class="hero-btn">LLENAR FORMULARIO</a>
-        <a  href="#servicios1" class="hero-btn">TRABAJEMOS JUNTOS</a>
-    </div>
+    <!-- Testimonios -->
 
 
+    <section  id ="clientes2" class="clientes">
+        <h2>Nuestros Clientes</h2>
+        <div class="logos-container">
+            <img src="Imagenes/sura.jpg" alt="Logo Cliente 1" class="logo">
+            <img src="Imagenes/conexo.jpg" alt="Logo Cliente 2" class="logo">
+            <img src="Imagenes/puntos.jpg" alt="Logo Cliente 3" class="logo">
+            <img src="Imagenes/postobon.jpg" alt="Logo Cliente 4" class="logo">
+            <img src="Imagenes/creafam.jpg" alt="Logo Cliente 5" class="logo">
+            <img src="Imagenes/uniban.jpg" alt="Logo Cliente 6" class="logo">
+        </div>
     </section>
+    
+
+
+    <!-- footer -->
+    <section class="footer">
+   
+        <p>"Las empresas no son máquinas; son organismos vivos en los que el talento humano debe ser cultivado y nutrido para florecer."Richard Branson</p>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/roymanguao/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/guaoroyman?igsh=MTZjcHQwanQzMmZ5bg==" target="_blank"><i class="fa fa-instagram"></i></a> 
+        </div>
+        <p>Hecho por Ray Guao Bolaño</p>
+    </section>
+ 
+
+    <!-------JavaScript for Toggle menu------->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+       
+    </script>
     
 
 </body>
