@@ -10,20 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b78f676cb5.js" crossorigin="anonymous"></script>
 
-    <script>
-        function mostrarEnlace(event) {
-            // Evita que el formulario se envíe
-            event.preventDefault();
-            
-            // Muestra el enlace debajo del formulario
-            var enlace = document.getElementById("enlace");
-            enlace.innerHTML = '<a href="https://www.google.com">Link de la guia</a>';
-        }
-    </script>
+    
 </head>
 <body>
     <section class="titulo-contactame" id="contacto">
-        <h1>Mensaje</h1>
+        <h1>Diligencia los datos y ten acceso a la guia</h1>
         
     </section>
     
@@ -56,16 +47,15 @@
                 
                 </div>
 
-                <div id="enlace"></div>
+                <a href="TarjetaMilitar.pdf" download="TarjetaMilitar.pdf">Descargar PDF de la guia</a>
             </div>
     
             <div class="contact-col">
-                <form action="https://formsubmit.co/roymanguao@gmail.com" method="POST" onsubmit="mostrarEnlace(event)">
+                <form action="https://formsubmit.co/roymanguao@gmail.com" method="POST">
                     <input type="text" name="name" placeholder="Ingresa tu nombre" required>
                     <input type="email" name="email" placeholder="Ingresa tu correo corporativo" required>
                     <input type="text" name="subject" placeholder="Ingresa tu móvil" required>
                     <input type="text" name="empresa" placeholder="Ingresa el nombre de tu empresa" required>
-                    <textarea rows="8" name="message" value="mensaje" required>Mensaje por defecto</textarea>
                     <button type="submit" class="hero-btn red-btn">Enviar formulario</button>
                     <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
                     <input type="hidden" name="_captcha" value="false">
