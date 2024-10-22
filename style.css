@@ -817,6 +817,14 @@ h2 {
     gap: 20px;
 }
 
+.iframe-container p {
+    margin-bottom: -30px;
+}
+
+#primer-parrafo {
+    margin-bottom: -35px;
+}
+
 #video {
     display: block;
     
@@ -834,7 +842,7 @@ h2 {
 #botonsalarial {
     background-color: #3e3cca;
     margin-left: 60px;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 #botonguia {
@@ -844,6 +852,10 @@ h2 {
     #video {
         width: 300px;
         height: 300px;
+    }
+
+    .iframe-container p {
+        font-size: 12px;
     }
 
     .container-videoimagen img {
