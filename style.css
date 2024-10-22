@@ -810,10 +810,24 @@ h2 {
 
 }
 
+.container-videoimagen {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
 #video {
     display: block;
-    margin: auto;
+    
     width: 400px;
+    height: 400px;
+}
+
+
+.container-videoimagen img {
+    
+    width: 300px;
     height: 400px;
 }
 
@@ -831,6 +845,12 @@ h2 {
         width: 300px;
         height: 300px;
     }
+
+    .container-videoimagen img {
+        
+        width: 220px;
+        height: 300px;
+    }
 }
 
 @media(max-width: 700px) {
@@ -842,6 +862,10 @@ h2 {
     }
     #botonguia {
         width: auto;
+    }
+
+    .container-videoimagen {
+        flex-direction: column;
     }
 }
 
