@@ -176,7 +176,12 @@ nav .fa-solid {
 }
 
 
-
+@media (max-width: 1024px) {
+    .nav-links ul li a {
+        
+        font-size: 10px;
+    }
+}
 
 
 
@@ -871,3 +876,16 @@ h2 {
 }
 
 
+/* auditoria express */
+
+#contactoauditoria h1 {
+    font-size: 20px;
+
+}
+
+@media(max-width: 1024px) {
+    #contactoauditoria h1 {
+        font-size: 15px;
+    
+    }
+}
