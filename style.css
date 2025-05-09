@@ -23,6 +23,10 @@
     position: relative;
 }
 
+.header-logos {
+    width: 20%;
+}
+
 
 
 nav {
@@ -60,7 +64,7 @@ nav img {
     content: '';
     width: 0%;
     height: 2px;
-    background: #90AFC5;
+    background: #EFB810;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -121,8 +125,8 @@ nav img {
 }
 
 .hero-btn:hover {
-    border: 1px solid #90AFC5;
-    background: #90AFC5;
+    border: 1px solid #EFB810;
+    background: #EFB810;
     transition: 1s;
 }
 
@@ -140,7 +144,7 @@ nav .fa-solid {
     }
 
     .header-logos {
-        width: 100%;
+        width: 55%;
     }
     .nav-links ul li {
         display: block;
@@ -200,6 +204,7 @@ nav .fa-solid {
 
 .servicios1 h1 {
     font-size: 30px;
+    color: #EFB810
 }
 
 
@@ -207,7 +212,7 @@ nav .fa-solid {
 h1 {
     font-size: 36px;
     font-weight: 600;
-    color: white;
+    color: #EFB810;
 }
 
 
@@ -247,7 +252,7 @@ h1 {
 
 .service-col {
     flex-basis: 45%;
-    background: #90AFC5;
+    background: #336B87;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
@@ -277,6 +282,9 @@ h1 {
     color: white;
 }
 
+.desafiosEstructura p, .desafiosEstructura h3 {
+    color: white;
+}
 
 h3 {
     text-align: center;
@@ -461,7 +469,7 @@ h3 {
 }
 
 .titulo-blog h1{
-    color: #fff;
+    
     margin-bottom: 40px;
     padding: 0;
 }
@@ -506,7 +514,7 @@ h3 {
 }
 
 .testimonios h1 {
-    color: #fff;
+    
     margin-bottom: 40px;
     padding: 0;
 
@@ -600,7 +608,7 @@ h2 {
 }
 
 .icons .fa {
-    color: #763626;
+    color: #2a3132;
     margin: 0 13px;
     cursor: pointer;
     padding: 18px 0;
@@ -656,9 +664,9 @@ h2 {
 }
 
 .red-btn {
-    border:  1px solid #763626;
+    border:  1px solid #2a3132;
     background: transparent;
-    color: #763626;
+    color: #2a3132;
 }
 
 .red-btn:hover {
@@ -725,7 +733,7 @@ h2 {
 
  .contact-col div .fa{
     font-size: 28px;
-    color: #763626;
+    color: #2a3132;
     margin: 10px;
     margin-right: 30px;
  }
