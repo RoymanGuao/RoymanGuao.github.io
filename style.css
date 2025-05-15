@@ -851,6 +851,10 @@ h2 {
     margin-top: 20px;
 }
 
+#botonsalarial:hover {
+    background-color: #EFB810;
+}
+
 #botonguia {
     width: 245px;
 }
