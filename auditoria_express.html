@@ -24,27 +24,78 @@
                     <li><a href="index.html#contacto">CONTACTO</a></li>
                     <li><a href="index.html#testimonios">TESTIMONIOS</a></li>
                     <li><a href="material_academico.html">MATERIAL ACADEMICO</a></li>
-                    <li><a href="auditoria_express.html">AUDITORIA EXPRESS</a></li>
+                    <li><a href="auditoria_express.html">COMPENSACION ESTRATEGICA APLICADA</a></li>
                 </ul>
             </div>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
 
-        <div class="text-box iframe-container">
-            
-            <div class="container-videoimagen">
-                <video id="video" controls >
-                    <source src="Imagenes/Auditoría Express de Compensación.mp4" type="video/mp4">
-                    
-                </video>  
-                              
-                <img src="Imagenes/auditoria.jpg" alt="">
-            </div>
-            
-            
-            <a id = "botonsalarial" href="form3.html" class="hero-btn boton1">Quiero la auditoría express</a>
-            
-        </div>
+        <canvas id="pdf-render"></canvas>
+
+  <div id="navigation">
+    <button id="prev-page">Anterior</button>
+    <span>Página: <span id="page-num"></span> / <span id="page-count"></span></span>
+    <button id="next-page">Siguiente</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+  <script>
+    const url = 'ondas.pdf'; // Cambia por tu archivo PDF
+
+    let pdfDoc = null,
+        pageNum = 1,
+        pageRendering = false,
+        canvas = document.getElementById('pdf-render'),
+        ctx = canvas.getContext('2d');
+
+    // Cargar PDF
+    pdfjsLib.getDocument(url).promise.then(doc => {
+      pdfDoc = doc;
+      document.getElementById('page-count').textContent = pdfDoc.numPages;
+      renderPage(pageNum);
+    });
+
+    function renderPage(num) {
+      pageRendering = true;
+
+      pdfDoc.getPage(num).then(page => {
+        const viewport = page.getViewport({ scale: 1.5 });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        const renderCtx = {
+          canvasContext: ctx,
+          viewport: viewport
+        };
+        page.render(renderCtx).promise.then(() => {
+          pageRendering = false;
+          document.getElementById('page-num').textContent = pageNum;
+        });
+      });
+    }
+
+    document.getElementById('prev-page').addEventListener('click', () => {
+      if (pageNum <= 1) return;
+      pageNum--;
+      renderPage(pageNum);
+    });
+
+    document.getElementById('next-page').addEventListener('click', () => {
+      if (pageNum >= pdfDoc.numPages) return;
+      pageNum++;
+      renderPage(pageNum);
+    });
+  </script>
+
+    <div class="botonera">
+        <a id = "botonsalarial" href="https://docs.google.com/forms/d/e/1FAIpQLSfBwM_tNCxkcTeR8AyITIKXn_UkkxCLQLFgxEtJvFIRVsINUg/viewform?usp=header" class="hero-btn boton1">Preinscríbete sin costo aquí </a>
+        <a id = "botonsalarial" href="https://api.whatsapp.com/send?phone=573218446773" class="hero-btn boton1">Escribeme a whatsapp</a>
+
+    </div>
+    
+        
+    
+
     
     </section>
 
