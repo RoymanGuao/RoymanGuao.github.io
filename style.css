@@ -7,17 +7,23 @@
 
 
 /* header */
+#subtitulo1header {
+    font-size: 24px;
+    margin: 0px;
+    font-weight: bold;
+}
+
 
 #subtitulo {
     font-size: 19px;
     margin: 0px;
-    font-weight: bold;
+    
 }
 
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(Imagenes/fondofinal.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(Imagenes/imagennuevafondo1.png);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -620,6 +626,12 @@ h2 {
 
 /* sobre mi */
 
+#subtitulosobremi {
+    font-size: 19px;
+    margin: 0px;
+    color: #EFB810;
+    
+}
 
 .sub-header {
     height: 50vh;
