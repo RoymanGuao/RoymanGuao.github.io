@@ -13,7 +13,7 @@
 <body>
     <section class = "header">
         <nav>
-            <a id="header-logo"><img src="https://see.fontimg.com/api/renderfont4/L3EyW/eyJyIjoiZnMiLCJoIjoxNjIsInciOjE1MDAsImZzIjoxMDgsImZnYyI6IiNGRkZGRkYiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/Ukc/the-scientist.png" alt="Cursive fonts" class="header-logos"></a>
+            
             <div class="nav-links" id="navLinks">
                 <i class="fa-solid fa-xmark onclick" onclick="hideMenu()"></i>
                 <ul>
@@ -23,75 +23,27 @@
                     <li><a href="index.html#about">SOBRE MI</a></li>
                     <li><a href="index.html#contacto">CONTACTO</a></li>
                     <li><a href="index.html#testimonios">TESTIMONIOS</a></li>
-                    <li><a href="material_academico.html">MATERIAL ACADEMICO</a></li>
-                    <li><a href="programa_compensacion.html">COMPENSACION ESTRATEGICA APLICADA</a></li>
+                    <li><a href="programa_compensacion.html">ROI 2026</a></li>
                 </ul>
             </div>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
 
-        <canvas id="pdf-render"></canvas>
+        
 
-  <div id="navigation">
-    <button id="prev-page">Anterior</button>
-    <span>Página: <span id="page-num"></span> / <span id="page-count"></span></span>
-    <button id="next-page">Siguiente</button>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
-  <script>
-    const url = 'ondas.pdf'; // Cambia por tu archivo PDF
-
-    let pdfDoc = null,
-        pageNum = 1,
-        pageRendering = false,
-        canvas = document.getElementById('pdf-render'),
-        ctx = canvas.getContext('2d');
-
-    // Cargar PDF
-    pdfjsLib.getDocument(url).promise.then(doc => {
-      pdfDoc = doc;
-      document.getElementById('page-count').textContent = pdfDoc.numPages;
-      renderPage(pageNum);
-    });
-
-    function renderPage(num) {
-      pageRendering = true;
-
-      pdfDoc.getPage(num).then(page => {
-        const viewport = page.getViewport({ scale: 1.5 });
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-
-        const renderCtx = {
-          canvasContext: ctx,
-          viewport: viewport
-        };
-        page.render(renderCtx).promise.then(() => {
-          pageRendering = false;
-          document.getElementById('page-num').textContent = pageNum;
-        });
-      });
-    }
-
-    document.getElementById('prev-page').addEventListener('click', () => {
-      if (pageNum <= 1) return;
-      pageNum--;
-      renderPage(pageNum);
-    });
-
-    document.getElementById('next-page').addEventListener('click', () => {
-      if (pageNum >= pdfDoc.numPages) return;
-      pageNum++;
-      renderPage(pageNum);
-    });
-  </script>
-
-    <div class="botonera">
-        <a id = "botonsalarial" href="https://docs.google.com/forms/d/e/1FAIpQLSfBwM_tNCxkcTeR8AyITIKXn_UkkxCLQLFgxEtJvFIRVsINUg/viewform?usp=header" class="hero-btn boton1">Preinscríbete sin costo aquí </a>
-        <a id = "botonsalarial" href="https://api.whatsapp.com/send?phone=573218446773" class="hero-btn boton1">Escríbenos a WhatsApp</a>
-
-    </div>
+        <div class="text-box iframe-container">
+            
+          <div class="container-videoimagen">
+              <iframe id ="video" src="https://www.youtube.com/embed/VM8_76yl1t8" title="Material Academico" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            
+              
+          </div>
+          
+          
+          <a id="boton1" href="#contacto" class="hero-btn boton1">LLENAR FORMULARIO</a>
+          <a id="boton" href="#servicios1" class="hero-btn boton">TRABAJEMOS JUNTOS</a>
+          
+      </div>
     
         
     
