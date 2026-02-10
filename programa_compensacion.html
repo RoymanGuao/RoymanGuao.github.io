@@ -38,6 +38,8 @@
                             
               
           </div>
+
+          
           
           
           <a id="boton1" href="#contacto" class="hero-btn boton1">LLENAR FORMULARIO</a>
@@ -50,6 +52,8 @@
 
     
     </section>
+
+    <div id="frase-aleatoria" class="frase"></div>
 
     <!-- Testimonios -->
 
@@ -94,6 +98,38 @@
         function hideMenu() {
             navLinks.style.right = "-200px";
         }
+
+        const frases = [
+    "Compensación y diseño organizacional al servicio de la estrategia.",
+    "Las decisiones sobre personas también son decisiones de negocio.",
+    "La coherencia organizacional no es casualidad.",
+    "Diseñar bien la estructura acelera los resultados.",
+    "La estrategia también se ejecuta desde la organización."
+  ];
+
+  const elemento = document.getElementById("frase-aleatoria");
+  let indiceActual = -1;
+
+  function mostrarFrase() {
+    elemento.classList.remove("visible");
+
+    setTimeout(() => {
+      let nuevoIndice;
+      do {
+        nuevoIndice = Math.floor(Math.random() * frases.length);
+      } while (nuevoIndice === indiceActual);
+
+      indiceActual = nuevoIndice;
+      elemento.textContent = frases[indiceActual];
+      elemento.classList.add("visible");
+    }, 300);
+  }
+
+  // Primera frase
+  mostrarFrase();
+
+  // Cambiar cada 5 segundos
+  setInterval(mostrarFrase, 5000);
 
        
     </script>
