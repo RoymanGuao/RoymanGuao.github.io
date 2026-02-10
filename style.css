@@ -1001,6 +1001,16 @@ h2 {
     transform: translateY(0);
   }
 
+  @media (max-width: 480px) {
+  .frase {
+    font-size: 1rem;
+    line-height: 1.45;
+    padding: 10px 14px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+}
+
   #btn-agenda {
     display: block;
     width: fit-content;
