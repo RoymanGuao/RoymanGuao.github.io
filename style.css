@@ -1094,7 +1094,7 @@ h2 {
 
   .indicadores-derecha{
     position: absolute;
-    top: 70px;
+    top: -270px;
     right: 10px;
     width: 88%;
     padding: 14px;
@@ -1106,7 +1106,7 @@ h2 {
     );
     backdrop-filter: blur(4px);
     border-radius: 12px;
-  }
+  }}
 
   .contador{
     font-size: 26px;
