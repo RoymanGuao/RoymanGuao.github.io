@@ -1089,3 +1089,29 @@ h2 {
   font-weight: 800;
   font-size: 14px;
 }
+/* ===== VERSION MOVIL - INDICADOR ENCIMA DEL VIDEO (ESTILO PREMIUM) ===== */
+@media (max-width: 768px){
+
+  .indicadores-derecha{
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 88%;
+    padding: 14px;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.55)
+    );
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+  }
+
+  .contador{
+    font-size: 26px;
+  }
+
+  .linea1{
+    font-size: 18px;
+  }
