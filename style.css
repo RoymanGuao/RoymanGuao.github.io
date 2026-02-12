@@ -1184,11 +1184,10 @@ h2 {
 }
 
 /* =====================================================
-   VERSION MOVIL FINAL – VIDEO + INDICADORES ENCIMA
+   VERSION MOVIL – INDICADOR ARRIBA DEL VIDEO
 ===================================================== */
 @media (max-width: 768px){
 
-  /* Contenedor del video */
   .container-videoimagen{
     position: relative;
     display: flex;
@@ -1197,29 +1196,15 @@ h2 {
     padding-right: 0;
   }
 
-  /* VIDEO */
-  #video{
-    width: 92vw;
-    max-width: 92vw;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    border: 0;
-    display: block;
-    position: relative;
-    z-index: 1; /* el video queda abajo */
-  }
-
-  /* TABLERO DE INDICADORES ENCIMA */
+  /* TABLERO ARRIBA (YA NO ABSOLUTE) */
   .indicadores-derecha{
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    width: auto;
-    padding: 12px;
-    z-index: 9999; /* SIEMPRE encima del video */
+    position: relative;   /* CLAVE: ya no absolute */
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 92vw;
+    margin-bottom: 15px;  /* espacio entre indicador y video */
 
-    /* estilo premium que ya veníamos usando */
     background: linear-gradient(
       to bottom,
       rgba(0,0,0,0.75),
@@ -1229,13 +1214,20 @@ h2 {
     border-radius: 12px;
   }
 
-  /* CONTADOR EN LINEA (nuevo formato) */
+  /* VIDEO DEBAJO */
+  #video{
+    width: 92vw;
+    max-width: 92vw;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    display: block;
+  }
+
+  /* CONTADOR */
   .contador-linea{
     font-size: 16px;
     line-height: 1.2;
     text-align: center;
-    white-space: normal;
-    font-weight: 900;
   }
 
 }
