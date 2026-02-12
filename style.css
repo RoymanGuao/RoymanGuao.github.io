@@ -1132,9 +1132,22 @@ h2 {
   height: auto;
   border: 0;
 }
+
+
+/* Pantallas “intermedias” típicas (laptop) */
+@media (max-width: 1366px){
+  #video{
+    width: clamp(320px, 56vw, 640px);
+  }
+}
+
+/* Celular / tablets pequeñas */
 @media (max-width: 768px){
+  .container-videoimagen{
+    flex-direction: column;
+    align-items: center;
+  }
   #video{
     width: 92vw;
-    max-width: 92vw;
   }
 }
