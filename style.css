@@ -1279,3 +1279,16 @@ h2 {
     margin-left: 20px;
   }
 }
+/* ===== AJUSTE INDICADORES MAS ARRIBA EN MOVIL ===== */
+@media (max-width: 768px){
+
+  .indicadores-derecha{
+    margin-top: 0 !important;   /* elimina separación extra */
+    padding-top: 10px;          /* espacio interno suave */
+  }
+
+  .container-videoimagen{
+    margin-top: 10px;           /* acerca todo al borde superior */
+  }
+
+}
