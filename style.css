@@ -1151,3 +1151,34 @@ h2 {
     width: 92vw;
   }
 }
+/* ===== LAYOUT DESKTOP/LAPTOP: VIDEO + TABLERO SIN TRASLAPES ===== */
+.container-videoimagen{
+  position: relative;
+}
+
+/* tablero a la derecha con ancho fijo */
+.indicadores-derecha{
+  width: 460px;          /* AJUSTA aquí (400–500) */
+  right: 20px;
+  top: 120px;
+  z-index: 9999;
+}
+
+/* video ocupa el resto del ancho, dejando carril para tablero */
+#video{
+  width: calc(100% - 550px);  /* 440 (tablero) + 40 de margen */
+  max-width: 980px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+  border: 0;
+}
+
+/* NUEVOS COLORES DEL CONTADOR*/
+.contador-linea{
+  color: #EFB810;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}

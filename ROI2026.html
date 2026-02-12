@@ -64,19 +64,7 @@
         Cierre fase empresas fundadoras en:
       </div>
 
-      <div class="contador">
-        <span class="num" id="cd-dias">0</span><span class="sep"> : </span>
-        <span class="num" id="cd-horas">00</span><span class="sep"> : </span>
-        <span class="num" id="cd-minutos">00</span><span class="sep"> : </span>
-         <span class="num" id="cd-segundos">00</span>
-      </div>
-
-      <div class="labels">
-        <span>DÍAS</span>
-        <span>HORAS</span>
-        <span>MIN.</span>
-        <span>SEG.</span>
-      </div>
+      <div class="contador-linea" id="cd-linea"></div>
     </div>
 
   </div>
@@ -176,7 +164,7 @@
   // Cambiar cada 5 segundos
   setInterval(mostrarFrase, 5000);
 
-   // ===== CONTADOR REGRESIVO =====
+   // ===== CONTADOR REGRESIVO FORMATO LINEA =====
 document.addEventListener("DOMContentLoaded", function () {
 
   function actualizarCuentaRegresiva() {
@@ -192,16 +180,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const minutos = Math.floor((diff / (1000 * 60)) % 60);
     const segundos = Math.floor((diff / 1000) % 60);
 
-    document.getElementById("cd-dias").textContent = dias;
-    document.getElementById("cd-horas").textContent = String(horas).padStart(2, "0");
-    document.getElementById("cd-minutos").textContent = String(minutos).padStart(2, "0");
-    document.getElementById("cd-segundos").textContent = String(segundos).padStart(2, "0");
+    const texto =
+      dias + " DÍAS: " +
+      String(horas).padStart(2,"0") + " HORAS: " +
+      String(minutos).padStart(2,"0") + " MIN.: " +
+      String(segundos).padStart(2,"0") + " SEG.";
+
+    const contenedor = document.getElementById("cd-linea");
+    if (contenedor) {
+      contenedor.textContent = texto;
+    }
   }
 
   actualizarCuentaRegresiva();
   setInterval(actualizarCuentaRegresiva, 1000);
 
 });
+
     </script>
     
 
