@@ -1231,3 +1231,51 @@ h2 {
   }
 
 }
+/* ===== Botones nuevos independientes (debajo del video) ===== */
+#boton3, #boton4{
+  margin-top: 18px;        /* asegura que queden debajo del video */
+  display: inline-block;   /* respeta tu estilo actual */
+}
+
+/* BOTÓN 3: borde blanco, texto blanco, hover dorado */
+#boton3{
+  border: 1px solid #fff;
+  color: #fff;
+}
+#boton3:hover{
+  border: 1px solid #EFB810;
+  background: #EFB810;
+  transition: 1s;
+}
+
+/* BOTÓN 4: estilo WhatsApp */
+#boton4{
+  border: 1px solid #25D366;   /* verde WhatsApp */
+  color: #fff;
+}
+#boton4:hover{
+  border: 1px solid #25D366;
+  background: #25D366;
+  transition: 1s;
+}
+
+/* Icono WhatsApp antes del texto */
+#boton4 i{
+  margin-right: 8px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* (Opcional) si quieres controlar separación entre los dos botones */
+#boton4{
+  margin-left: 20px;
+}
+
+/* Responsive: replica tu ajuste que antes era para #boton y #boton1 */
+@media (max-width: 700px){
+  #boton3, #boton4{
+    padding: 8px 20px;
+    font-size: 8px;
+    margin-left: 20px;
+  }
+}
