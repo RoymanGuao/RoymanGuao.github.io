@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b78f676cb5.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -43,6 +44,41 @@
   referrerpolicy="strict-origin-when-cross-origin"
   allowfullscreen>
 </iframe>
+ <!-- INDICADORES DERECHA -->
+  <div class="indicadores-derecha">
+
+    <div class="indicador indicador-top">
+      <div class="linea1">
+        <span class="num">15</span> organizaciones
+      </div>
+      <div class="linea2">
+        confirmadas en la primera semana
+      </div>
+      <div class="linea3">
+        Actualización semanal
+      </div>
+    </div>
+
+    <div class="indicador indicador-bottom">
+      <div class="cierre-titulo">
+        Cierre fase empresas fundadoras en:
+      </div>
+
+      <div class="contador">
+        <span class="num" id="cd-dias">0</span><span class="sep"> : </span>
+        <span class="num" id="cd-horas">00</span><span class="sep"> : </span>
+        <span class="num" id="cd-minutos">00</span>
+      </div>
+
+      <div class="labels">
+        <span>DÍAS</span>
+        <span>HORAS</span>
+        <span>MINUTOS</span>
+      </div>
+    </div>
+
+  </div>
+  <!-- FIN INDICADORES -->
               
           </div>
 
@@ -138,7 +174,24 @@
   // Cambiar cada 5 segundos
   setInterval(mostrarFrase, 5000);
 
-       
+   // ===== CONTADOR REGRESIVO =====
+function actualizarCuentaRegresiva() {
+
+  const objetivo = new Date(2026, 2, 10, 0, 0, 0); // Marzo = 2
+  const ahora = new Date();
+  let diff = objetivo - ahora;
+
+  if (diff < 0) diff = 0;
+
+  const totalMinutos = Math.floor(diff / 60000);
+  const dias = Math.floor(totalMinutos / (60 * 24));
+  const horas = Math.floor((totalMinutos % (60 * 24)) / 60);
+  const minutos = totalMinutos % 60;
+
+  document.getElementById("cd-dias").textContent = dias;
+  document.getElementById("cd-horas").textContent = String(horas).padStart(2, "0");
+  document.getElementById("cd-minutos").textContent = String(minutos).padStart(2, "0");
+}    
     </script>
     
 

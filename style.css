@@ -1017,3 +1017,75 @@ h2 {
      margin: 48px auto 70px auto;
 
   }
+  /* === Indicadores derecha (overlay) === */
+.container-videoimagen{
+  position: relative; /* clave para ubicar el overlay dentro */
+}
+
+.indicadores-derecha{
+  position: absolute;
+  top: 110px;      /* ajusta si lo quieres más arriba/abajo */
+  right: 40px;     /* ajusta si lo quieres más cerca del borde */
+  width: 340px;
+  background: rgba(0,0,0,0.55);
+  padding: 18px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  z-index: 9999;
+}
+
+/* Bloques */
+.indicador{
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.indicador-bottom{
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Textos */
+.linea1{
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.linea2{
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+.linea3{
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 10px;
+  opacity: 0.95;
+}
+
+/* Dorado */
+.num{ color: #EFB810; }
+.sep{ color: #EFB810; font-weight: 900; }
+
+/* Contador */
+.cierre-titulo{
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.contador{
+  font-size: 54px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.labels{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  color: #EFB810;
+  font-weight: 800;
+  font-size: 14px;
+}
