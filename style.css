@@ -1023,10 +1023,10 @@ h2 {
 }
 
 .indicadores-derecha{
-  position: absolute;
-  top: 110px;      /* ajusta si lo quieres más arriba/abajo */
-  right: 40px;     /* ajusta si lo quieres más cerca del borde */
-  width: 340px;
+   position: absolute;
+  top: 120px;
+  right: 20px;   /* más espacio contra el borde */
+  width: 420px;  /* más ancho para los segundos */
   background: rgba(0,0,0,0.55);
   padding: 18px;
   color: #ffffff;
@@ -1077,7 +1077,7 @@ h2 {
   margin-bottom: 10px;
 }
 .contador{
-  font-size: 54px;
+  font-size: 42px;
   font-weight: 900;
   letter-spacing: 1px;
 }

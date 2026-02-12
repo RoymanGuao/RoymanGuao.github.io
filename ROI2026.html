@@ -67,13 +67,15 @@
       <div class="contador">
         <span class="num" id="cd-dias">0</span><span class="sep"> : </span>
         <span class="num" id="cd-horas">00</span><span class="sep"> : </span>
-        <span class="num" id="cd-minutos">00</span>
+        <span class="num" id="cd-minutos">00</span><span class="sep"> : </span>
+         <span class="num" id="cd-segundos">00</span>
       </div>
 
       <div class="labels">
         <span>DÍAS</span>
         <span>HORAS</span>
-        <span>MINUTOS</span>
+        <span>MIN.</span>
+        <span>SEG.</span>
       </div>
     </div>
 
@@ -179,26 +181,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function actualizarCuentaRegresiva() {
 
-    const objetivo = new Date(2026, 2, 10, 0, 0, 0); // Marzo = 2
+    const objetivo = new Date(2026, 2, 10, 0, 0, 0);
     const ahora = new Date();
     let diff = objetivo - ahora;
 
     if (diff < 0) diff = 0;
 
-    const totalMinutos = Math.floor(diff / 60000);
-    const dias = Math.floor(totalMinutos / (60 * 24));
-    const horas = Math.floor((totalMinutos % (60 * 24)) / 60);
-    const minutos = totalMinutos % 60;
+    const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutos = Math.floor((diff / (1000 * 60)) % 60);
+    const segundos = Math.floor((diff / 1000) % 60);
 
-    const elDias = document.getElementById("cd-dias");
-    const elHoras = document.getElementById("cd-horas");
-    const elMin = document.getElementById("cd-minutos");
-
-    if (!elDias || !elHoras || !elMin) return;
-
-    elDias.textContent = dias;
-    elHoras.textContent = String(horas).padStart(2, "0");
-    elMin.textContent = String(minutos).padStart(2, "0");
+    document.getElementById("cd-dias").textContent = dias;
+    document.getElementById("cd-horas").textContent = String(horas).padStart(2, "0");
+    document.getElementById("cd-minutos").textContent = String(minutos).padStart(2, "0");
+    document.getElementById("cd-segundos").textContent = String(segundos).padStart(2, "0");
   }
 
   actualizarCuentaRegresiva();
