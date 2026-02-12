@@ -1115,3 +1115,26 @@ h2 {
   .linea1{
     font-size: 18px;
   }
+/* ===== AGRANDAR VIDEO (DESKTOP) ===== */
+.container-videoimagen{
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* el video se pega a la izquierda */
+  align-items: center;
+  gap: 20px;
+}
+
+/* El iframe crece manteniendo 16:9 */
+#video{
+  width: 62vw;           /* ancho tipo “recuadro rojo” */
+  max-width: 980px;      /* límite para pantallas grandes */
+  aspect-ratio: 16 / 9;  /* mantiene proporción */
+  height: auto;
+  border: 0;
+}
+@media (max-width: 768px){
+  #video{
+    width: 92vw;
+    max-width: 92vw;
+  }
+}
