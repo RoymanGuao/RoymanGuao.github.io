@@ -175,23 +175,36 @@
   setInterval(mostrarFrase, 5000);
 
    // ===== CONTADOR REGRESIVO =====
-function actualizarCuentaRegresiva() {
+document.addEventListener("DOMContentLoaded", function () {
 
-  const objetivo = new Date(2026, 2, 10, 0, 0, 0); // Marzo = 2
-  const ahora = new Date();
-  let diff = objetivo - ahora;
+  function actualizarCuentaRegresiva() {
 
-  if (diff < 0) diff = 0;
+    const objetivo = new Date(2026, 2, 10, 0, 0, 0); // Marzo = 2
+    const ahora = new Date();
+    let diff = objetivo - ahora;
 
-  const totalMinutos = Math.floor(diff / 60000);
-  const dias = Math.floor(totalMinutos / (60 * 24));
-  const horas = Math.floor((totalMinutos % (60 * 24)) / 60);
-  const minutos = totalMinutos % 60;
+    if (diff < 0) diff = 0;
 
-  document.getElementById("cd-dias").textContent = dias;
-  document.getElementById("cd-horas").textContent = String(horas).padStart(2, "0");
-  document.getElementById("cd-minutos").textContent = String(minutos).padStart(2, "0");
-}    
+    const totalMinutos = Math.floor(diff / 60000);
+    const dias = Math.floor(totalMinutos / (60 * 24));
+    const horas = Math.floor((totalMinutos % (60 * 24)) / 60);
+    const minutos = totalMinutos % 60;
+
+    const elDias = document.getElementById("cd-dias");
+    const elHoras = document.getElementById("cd-horas");
+    const elMin = document.getElementById("cd-minutos");
+
+    if (!elDias || !elHoras || !elMin) return;
+
+    elDias.textContent = dias;
+    elHoras.textContent = String(horas).padStart(2, "0");
+    elMin.textContent = String(minutos).padStart(2, "0");
+  }
+
+  actualizarCuentaRegresiva();
+  setInterval(actualizarCuentaRegresiva, 1000);
+
+});
     </script>
     
 
