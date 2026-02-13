@@ -1292,12 +1292,12 @@ h2 {
   }
 
 }
-/* ===== SUBIR SOLO LA SECCION DEL VIDEO (MOVIL) ===== */
+/* ===== SUBIR SOLO ESTA SECCION EN MOVIL (FIX REAL) ===== */
 @media (max-width: 768px){
 
   .text-box.iframe-container{
-    top: 12% !important;             /* sube el bloque */
-    transform: translateY(0) !important;  /* quita el centrado vertical */
+    top: 12% !important;
+    transform: translate(-50%, 0) !important; /* mantiene centrado horizontal */
   }
 
 }
