@@ -136,6 +136,48 @@ nav img {
     transition: 1s;
 }
 
+.roi-float-box {
+    position: fixed;
+    right: 24px;
+    bottom: 100px;
+    width: 300px;
+    background: #2a3132;
+    border: 1px solid #EFB810;
+    border-radius: 10px;
+    padding: 16px;
+    z-index: 999;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.roi-float-box p {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 0 0 12px 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+.roi-float-box .hero-btn {
+    display: block;
+    text-align: center;
+    border-color: #EFB810;
+}
+
+@media (max-width: 700px) {
+    .roi-float-box {
+        right: 12px;
+        left: 12px;
+        width: auto;
+        bottom: 80px;
+        padding: 14px;
+    }
+
+    .roi-float-box p {
+        font-size: 14px;
+    }
+}
+
 nav .fa-solid {
     display: none;
 }
