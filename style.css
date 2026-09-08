@@ -761,6 +761,7 @@ h1 {
 
 .servicios2-ultimo {
     padding-bottom: 60px;
+    margin-bottom: 0;
 }
 
 .service-col {
@@ -857,6 +858,7 @@ h3 {
 
     .servicios2-ultimo {
         padding-top: 130px;
+        margin-bottom: 0;
     }
 
     .servicios1 h2 {
@@ -1333,7 +1335,7 @@ h2 {
 }
 
 .socio-fundador {
-    background: #ffffff;
+    background: #faf8f4;
 }
 
 .socio-fundador-inner {
@@ -1520,7 +1522,7 @@ h2 {
  /* contactos */
 
  .contacto-seccion {
-    background: #faf8f4;
+    background: #ffffff;
     padding: 90px 6% 90px;
  }
 
