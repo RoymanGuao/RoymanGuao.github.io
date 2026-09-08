@@ -1053,7 +1053,11 @@ h3 {
 /* Testimonios */
 
 .testimonios {
-    background: linear-gradient(160deg, #171a26 0%, #0e0f17 100%);
+    background-color: #12141c;
+    background-image: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6)), url(Imagenes/Imagenfondotestimonios.jpg);
+    background-position: center;
+    background-size: cover, contain;
+    background-repeat: no-repeat;
     text-align: center;
 }
 
