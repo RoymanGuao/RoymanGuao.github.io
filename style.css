@@ -162,11 +162,66 @@
 .clientes-hero .logo {
     filter: grayscale(100%);
     opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
 .clientes-hero .logo:hover {
     filter: grayscale(0%);
     opacity: 1;
+}
+
+.logos-marquee {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.logos-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 70px;
+    padding-right: 70px;
+    animation: logos-scroll 32s linear infinite;
+}
+
+.logos-marquee:hover .logos-track {
+    animation-play-state: paused;
+}
+
+.logos-track .logo {
+    height: 46px;
+    width: auto;
+    max-width: none;
+    flex-shrink: 0;
+}
+
+.logos-track .logo:hover {
+    transform: none;
+}
+
+@keyframes logos-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 700px) {
+    .logos-track .logo {
+        height: 34px;
+    }
+
+    .logos-track {
+        gap: 44px;
+        padding-right: 44px;
+        animation-duration: 22s;
+    }
 }
 
 .clientes-hero h2 {
@@ -704,6 +759,10 @@ h1 {
     margin-top: 0;
 }
 
+.servicios2-ultimo {
+    padding-bottom: 60px;
+}
+
 .service-col {
     flex: 1 1 42%;
     max-width: 520px;
@@ -795,6 +854,11 @@ h3 {
     .servicios2 {
         margin-bottom: -80px;
     }
+
+    .servicios2-ultimo {
+        padding-top: 130px;
+    }
+
     .servicios1 h2 {
         font-size: 24px;
     }
@@ -1403,8 +1467,8 @@ h2 {
     }
 
     .socio-fundador-imagen {
-        aspect-ratio: 4 / 3;
-        max-width: 420px;
+        aspect-ratio: 3 / 4;
+        max-width: 340px;
         margin: 0 auto;
     }
 
