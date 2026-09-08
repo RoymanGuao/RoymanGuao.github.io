@@ -185,7 +185,7 @@
     width: max-content;
     gap: 70px;
     padding-right: 70px;
-    animation: logos-scroll 32s linear infinite;
+    animation: logos-scroll 60s linear infinite;
 }
 
 .logos-marquee:hover .logos-track {
@@ -220,7 +220,7 @@
     .logos-track {
         gap: 44px;
         padding-right: 44px;
-        animation-duration: 22s;
+        animation-duration: 45s;
     }
 }
 
@@ -1053,22 +1053,46 @@ h3 {
 /* Testimonios */
 
 .testimonios {
-    margin: 100px auto;
-    width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(Imagenes/imagenIA.png);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
+    background: #ffffff;
     text-align: center;
-    padding: 100px 0;
 }
 
-.testimonios h1 {
+.testimonios-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 6% 90px;
+}
 
-    margin-bottom: 40px;
-    padding: 0;
-    color: #fff;
+.testimonios-titulo {
+    margin-bottom: 48px;
+}
 
+.testimonios-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    color: #c9861a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.testimonios-eyebrow::before,
+.testimonios-eyebrow::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: rgba(201, 134, 26, 0.4);
+}
+
+.testimonios-titulo h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 36px;
+    line-height: 1.25;
+    color: #14161f;
+    font-weight: 700;
 }
 
 .testimonios-slider {
@@ -1098,13 +1122,12 @@ h3 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(239, 184, 16, 0.35);
+    background: #fffefb;
+    border: 1px solid rgba(239, 184, 16, 0.3);
     border-radius: 16px;
     padding: 40px 44px;
     box-sizing: border-box;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
     opacity: 0;
     transform: translateY(14px);
     pointer-events: none;
@@ -1120,12 +1143,12 @@ h3 {
 .testimonio-quote-icon {
     color: #EFB810;
     font-size: 26px;
-    opacity: 0.85;
+    opacity: 0.9;
     margin-bottom: 16px;
 }
 
 .testimonio-texto {
-    color: rgba(255, 255, 255, 0.92);
+    color: #4a4a4a;
     font-size: 15px;
     line-height: 1.7;
     font-style: italic;
@@ -1139,13 +1162,13 @@ h3 {
 }
 
 .testimonio-nombre {
-    color: #fff;
+    color: #14161f;
     font-weight: 600;
     font-size: 15px;
 }
 
 .testimonio-cargo {
-    color: #EFB810;
+    color: #c9861a;
     font-size: 13px;
 }
 
@@ -1154,9 +1177,9 @@ h3 {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
+    border: 1px solid #e2ddd3;
+    background: #faf8f4;
+    color: #14161f;
     font-size: 15px;
     cursor: pointer;
     display: flex;
@@ -1168,7 +1191,7 @@ h3 {
 .testimonio-arrow:hover {
     background: #EFB810;
     border-color: #EFB810;
-    color: #2A3132;
+    color: #14161f;
     transform: scale(1.08);
 }
 
@@ -1183,7 +1206,7 @@ h3 {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
+    background: #e2ddd3;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
 }
@@ -1273,12 +1296,11 @@ h2 {
 }
 
 @media(max-width: 700px) {
-    .testimonios{
-        width: 100%;
-        padding: 60px 0;
+    .testimonios-inner {
+        padding: 60px 6% 60px;
     }
-    .testimonios h1{
-        font-size: 24px;
+    .testimonios-titulo h2{
+        font-size: 26px;
     }
 }
 
@@ -1522,7 +1544,7 @@ h2 {
  /* contactos */
 
  .contacto-seccion {
-    background: #ffffff;
+    background: #faf8f4;
     padding: 90px 6% 90px;
  }
 
